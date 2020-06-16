@@ -1,50 +1,49 @@
-const Sequelize = require('sequelize');
-const sequelize = new Sequelize('database', process.env.DB_USER, process.env.DB_PASS, {
-	host: 'localhost', // 0.0.0.0
-  	dialect: 'sqlite',
-  	pool: {
-    	max: 5,
-    	min: 0,
-    	idle: 10000
-  	},
-  	storage: 'database.sqlite'
+const express = require('express');
+const Datastore = require('nedb');
+const bodyParser = require('body-parser');
+const app = express();
+
+app.use(express.static('public'));
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.json());
+
+const port = process.env.PORT || 8000;
+
+const db = new Datastore({ filename: './data/db', autoload: true });
+
+app.get('/', (req, res) => {
+    res.sendFile(__dirname + '/views/index.html');
 });
 
-  sequelize.authenticate()
-  .then(() => {
-    console.log('Connection has been established successfully.');
-    Top = sequelize.define('top', {
-      username: {
-        type: Sequelize.STRING
-      },
-      score: {
-        type: Sequelize.INTEGER
-      }
-    });
-  })
-  .catch(err => {
-    console.error('Unable to connect to the database:', err);
-  });
+app.get('/info', (req, res) => {
+    db.find({},(err, docs) => {
+        res.send(JSON.stringify(docs))
+    })  
+});
 
-  function dbAdd(username, score) {
-    Top.create({ username: username, score: score }).then(top => {
-        console.log("Auto-generated ID:", top.id);
+app.get('/top/:n', (req, res) => {
+    db.find({}).sort({score: 1}).limit(req.params.n).exec((err, docs) => {
+        res.send({"top": JSON.stringify(docs)});
     });
-}
+});
 
-function dbGetTop(num) {
-    return Top.findAll({
-        limit: num,
-		order: [
-            ['score', 'DESC']
-        ]
-	}).then(tops => tops);
-}
+app.post('/save', (req, res) => {
+    try  {
+        let username = req.body.name.toString();
+        let score = parseInt(req.body.score);
 
-function dbGetAll() {
-    Top.findAll().then(tops => {
-        tops.forEach(top => {
-			console.log(top.username, top.score);
-		});
-    });
-}
+        db.insert({username: username, score: score}, (err, newDoc) => {   
+            console.log("New player added to db");
+            res.send({"status":"success"});
+        });
+    }
+    catch (e) {
+        console.log("Some error occured:" + e);
+        res.send("Wrong data recieved");
+    } 
+});
+
+app.listen(port, () => {
+    console.log("server is listening on port 8000");
+});
+
