@@ -111,9 +111,10 @@ function game(){
     jump.play();
   }
   
-  if(krtek2.position.x < 0)
+  if(krtek2.position.x < 0){
     krtek2.position.x = width;
-    
+  }
+  
   fill(0)
   textSize(20);
   textFont('helvetica');
