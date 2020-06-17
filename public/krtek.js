@@ -138,8 +138,8 @@ function over(){
       fill(0);
       textSize(20);
       textFont('helvetica');
-      text('Game Over! Press R to restart', 200 , (height/2)-15);
-      text(`Your score: ${score}`, 270, (height/2)+15);
+      text('Game Over! Press R to restart', width/2, "45%");
+      text(`Your score: ${score}`, width/2, "50%");
       
       if (stateChanged) {
     stateChanged = false;
