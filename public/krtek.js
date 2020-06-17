@@ -62,8 +62,8 @@ function start(){
   fill(0)
   textSize(20);
   textFont('helvetica');
-  text('Press S to start', 300, (height/2)-15);
-  text('and press space to jump', 260, (height/2)+15);
+  text('Press S to start', width/2, (height/2)-15);
+  text('and press mouse to jump', width/2, (height/2)+15);
 }
 
 function draw() {  
