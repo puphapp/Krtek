@@ -32,9 +32,8 @@ function setup() {
   
   ground = createSprite(windowWidth/2,windowHeight);
   ground.addImage(gImg);
-  //ground.scale = 0.6;
+  ground.scale = 1.1;
   ground.setCollider('rectangle', 0, 0, width*2,180);
-  ground.width=windowWidth;
   ground.depth = 2;
   
   bgImg = loadImage('assets/back.png');
@@ -57,8 +56,8 @@ function setup() {
 function start(){
   background(bgImg);
   
-  image(gImg, -scrollG, 440, width, 200);
-  image(gImg, -scrollG + width, 440, width, 200);
+  image(gImg, -scrollG, 440, height, 200);
+  image(gImg, -scrollG + width, 440, height, 200);
   
   fill(0)
   textSize(20);
@@ -90,8 +89,8 @@ function draw() {
 
 function game(){
   
-  image(gImg, -scrollG, 440, width, 200);
-  image(gImg, -scrollG + width, 440, width, 200);
+  image(gImg, -scrollG, 440, height, 100);
+  image(gImg, -scrollG + width, 440, height, 100);
     
   if (scrollG > width) {
     scrollG = 0;
