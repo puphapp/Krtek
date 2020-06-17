@@ -30,10 +30,11 @@ function setup() {
   
   gImg = loadImage('assets/ground.png');
   
-  ground = createSprite(windowWidth/2,windowHeight-200);
+  ground = createSprite(windowWidth/2,windowHeight);
   ground.addImage(gImg);
   //ground.scale = 0.6;
   ground.setCollider('rectangle', 0, 0, width*2,180);
+  ground.width=windowWidth;
   ground.depth = 2;
   
   bgImg = loadImage('assets/back.png');
@@ -150,7 +151,7 @@ function over(){
 
     let form = document.createElement('form');
     form.style.position = "absolute";
-    form.style.top = "50%"; 
+    form.style.top = "55%"; 
     form.style.left = "50%"; 
     form.style.transform = "translateX(-50%)";
 
@@ -167,8 +168,8 @@ function over(){
     allBtn.textContent = "Get TOP5";
     allBtn.setAttribute('class', 'top-btn');
     allBtn.style.position = "absolute";
-    allBtn.style.top = "55%";
-    allBtn.style.left = "50%"; 
+    allBtn.style.top = "60%";
+    allBtn.style.left = "60%"; 
     allBtn.style.transform = "translateX(-50%)";
 
     let topDiv = document.createElement('div');
