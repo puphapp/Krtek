@@ -22,7 +22,8 @@ function preload(){
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  krtek = createSprite(500, windowHeight-400,'public/assets/krtek/tile001.png', 'public/assets/krtek/tile02.png');
+  
+  krtek = createSprite(500, windowHeight-400);
   krtek.addAnimation('stretch','public/assets/krtek/tile001.png', 'public/assets/krtek/tile0001.png');
   krtek.addAnimation('normal','public/assets/krtek/tile001.png', 'public/assets/krtek/tile02.png');
   //krtek.scale = 0.6;
@@ -50,7 +51,7 @@ function setup() {
   updateSprites(false);
   
   ost.play();
-    loop();
+  loop();
 }
 
 function start(){
