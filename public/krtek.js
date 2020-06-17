@@ -30,7 +30,7 @@ function setup() {
   
   gImg = loadImage('assets/ground.png');
   
-  ground = createSprite(windowWidth,windowHeight-200);
+  ground = createSprite(windowWidth,windowHeight);
   ground.addImage(gImg);
   ground.scale = 0.6;
   ground.setCollider('rectangle', 0, 0, width*2,180);
