@@ -56,7 +56,7 @@ function setup() {
 function start(){
   background(bgImg);
   
-  ground(gImg);
+  image(gImg, -scrollG, height, width, 100);
     
   fill(0)
   textSize(20);
