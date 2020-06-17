@@ -89,8 +89,8 @@ function draw() {
 
 function game(){
   
-  image(gImg, -scrollG, 0, width, 100);
-  image(gImg, -scrollG + width, 0, width, 100);
+  image(gImg, -scrollG, height, width, 100);
+  image(gImg, -scrollG + width, height, width, 100);
     
   if (scrollG > width) {
     scrollG = 0;
