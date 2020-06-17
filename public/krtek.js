@@ -24,8 +24,8 @@ function setup() {
   createCanvas(windowWidth, windowHeight);
   
   krtek = createSprite(500, windowHeight-400);
-  krtek.addAnimation('stretch','assets/tile001.png', 'assets/tile0001.png');
-  krtek.addAnimation('normal','public/assets/tile001.png', 'public/assets/tile02.png');
+  krtek.addAnimation('stretch','assets/1.png', 'assets/tile2.png');
+  krtek.addAnimation('normal','public/assets/3.png', 'public/assets/4.png');
   //krtek.scale = 0.6;
   krtek.setCollider('circle', 0, 0, 80);
   
