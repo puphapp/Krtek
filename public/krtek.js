@@ -56,8 +56,8 @@ function setup() {
 function start(){
   background(bgImg);
   
-  image(gImg, -scrollG, height-200, width, 100);
-  image(gImg, -scrollG + width, height-200, width, 100);
+  image(gImg, -scrollG, 440, width, 100);
+  image(gImg, -scrollG + width, 440, width, 100);
   
   fill(0)
   textSize(20);
@@ -89,8 +89,8 @@ function draw() {
 
 function game(){
   
-  image(gImg, -scrollG, height-200, width, 100);
-  image(gImg, -scrollG + width, height-200, width, 100);
+  image(gImg, -scrollG, 440, width, 100);
+  image(gImg, -scrollG + width, 440, width, 100);
     
   if (scrollG > width) {
     scrollG = 0;
