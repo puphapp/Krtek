@@ -22,7 +22,7 @@ function preload(){
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  krtek = createSprite(400, windowHeight-400,'assets/krtek/tile001.png', 'assets/krtek/tile02.png');
+  krtek = createSprite(500, windowHeight-400,'assets/krtek/tile001.png', 'assets/krtek/tile02.png');
   krtek.addAnimation('stretch','assets/krtek/tile001.png', 'assets/krtek/tile0001.png');
   krtek.addAnimation('normal','assets/krtek/tile001.png', 'assets/krtek/tile02.png');
   //krtek.scale = 0.6;
@@ -30,7 +30,7 @@ function setup() {
   
   gImg = loadImage('assets/ground.png');
   
-  ground = createSprite(windowWidth/2,windowHeight-100);
+  ground = createSprite(windowWidth/2,windowHeight-200);
   ground.addImage(gImg);
   //ground.scale = 0.6;
   ground.setCollider('rectangle', 0, 0, width*2,180);
@@ -38,7 +38,7 @@ function setup() {
   
   bgImg = loadImage('assets/back.png');
   
-  krtek2 = createSprite(random(100, width), random(400,450));
+  krtek2 = createSprite(random(100, width), windowHeight-200);
   krtek2.addAnimation('normal','assets/krtek2/tile1.png', 'assets/krtek2/tile4.png');
   krtek2.scale = 0.5;
   krtek2.setCollider('circle', 0, 0, 80);
@@ -56,14 +56,14 @@ function setup() {
 function start(){
   background(bgImg);
   
-  image(gImg, -scrollG, 440, width, 100);
-  image(gImg, -scrollG + width, 440, width, 100);
+  image(gImg, -scrollG, 440, width, 200);
+  image(gImg, -scrollG + width, 440, width, 200);
   
   fill(0)
   textSize(20);
   textFont('helvetica');
   text('Press S to start', width/2, (height/2)-15);
-  text('and press mouse to jump', (width/2)-100, (height/2)+15);
+  text('and press mouse to jump', (width/2)-50, (height/2)+15);
 }
 
 function draw() {  
@@ -89,8 +89,8 @@ function draw() {
 
 function game(){
   
-  image(gImg, -scrollG, 440, width, 100);
-  image(gImg, -scrollG + width, 440, width, 100);
+  image(gImg, -scrollG, 440, width, 200);
+  image(gImg, -scrollG + width, 440, width, 200);
     
   if (scrollG > width) {
     scrollG = 0;
