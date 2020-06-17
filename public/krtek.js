@@ -56,7 +56,7 @@ function setup() {
 function start(){
   background(bgImg);
   
-  ground();
+  ground(gImg);
     
   fill(0)
   textSize(20);
@@ -137,7 +137,7 @@ function over(){
       fill(0);
       textSize(20);
       textFont('helvetica');
-      text('Game Over! Press R to restart', width/2, (height/2)-30);
+      text('Game Over! Press R to restart', (width/2)-100, (height/2)-30);
       text(`Your score: ${score}`, width/2, height/2);
       
       if (stateChanged) {
