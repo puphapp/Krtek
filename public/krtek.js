@@ -56,14 +56,14 @@ function setup() {
 function start(){
   background(bgImg);
   
-  image(gImg, -scrollG, 440, width, 100);
-  image(gImg, -scrollG + width, 440, width, 100);
+  image(gImg, -scrollG, height-50, width, 100);
+  image(gImg, -scrollG + width, height-50, width, 100);
   
   fill(0)
   textSize(20);
   textFont('helvetica');
   text('Press S to start', width/2, (height/2)-15);
-  text('and press mouse to jump', width/2, (height/2)+15);
+  text('and press mouse to jump', (width/2)-20, (height/2)+15);
 }
 
 function draw() {  
