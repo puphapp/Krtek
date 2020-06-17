@@ -89,8 +89,8 @@ function draw() {
 
 function game(){
   
-  image(gImg, -scrollG, 440, height, 100);
-  image(gImg, -scrollG + width, 440, height, 100);
+  image(gImg, -scrollG, 0, width, 100);
+  image(gImg, -scrollG + width, 0, width, 100);
     
   if (scrollG > width) {
     scrollG = 0;
@@ -168,7 +168,7 @@ function over(){
     allBtn.setAttribute('class', 'top-btn');
     allBtn.style.position = "absolute";
     allBtn.style.top = "60%";
-    allBtn.style.left = "60%"; 
+    allBtn.style.left = "50%"; 
     allBtn.style.transform = "translateX(-50%)";
 
     let topDiv = document.createElement('div');
