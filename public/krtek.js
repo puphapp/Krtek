@@ -40,7 +40,7 @@ function setup() {
   bgImg = loadImage('assets/back.png');
   
   krtek2 = createSprite(random(100, width), windowHeight-200);
-  krtek2.addAnimation('normal','assets/krtek2/tile1.png', 'assets/krtek2/tile4.png');
+  krtek2.addAnimation('normal','assets/tile1.png', 'assets/tile4.png');
   krtek2.scale = 0.5;
   krtek2.setCollider('circle', 0, 0, 80);
   krtek2.depth = 1;
@@ -57,13 +57,13 @@ function setup() {
 function start(){
   background(bgImg);
   
-  image(gImg, -scrollG, 500, width, 100);
+  image(gImg, -scrollG, 600, width, 100);
     
   fill(0)
   textSize(20);
   textFont('helvetica');
-  text('Press S to start', width/2-30, (height/2)-15);
-  text('and press mouse to jump', (width/2)-60, (height/2)+15);
+  text('Press S to start', centr, (height/2)-15);
+  text('and press mouse to jump', centr, (height/2)+15);
 }
 
 function draw() {  
@@ -89,8 +89,8 @@ function draw() {
 
 function game(){
   
-  image(gImg, -scrollG, 500, width, 100);
-  image(gImg, -scrollG + width, 500, width, 100);
+  image(gImg, -scrollG, 600, width, 100);
+  image(gImg, -scrollG + width, 600, width, 100);
     
   if (scrollG > width) {
     scrollG = 0;
@@ -138,8 +138,8 @@ function over(){
       fill(0);
       textSize(20);
       textFont('helvetica');
-      text('Game Over! Press R to restart', (width/2)-100, (height/2)-30);
-      text(`Your score: ${score}`, width/2-50, height/2);
+      text('Game Over! Press R to restart', (width/2)-150, (height/2)-30);
+      text(`Your score: ${score}`, width/2-100, height/2);
       
       if (stateChanged) {
     stateChanged = false;
