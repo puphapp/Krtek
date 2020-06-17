@@ -23,9 +23,9 @@ function preload(){
 function setup() {
   createCanvas(windowWidth, windowHeight);
   
-  krtek = createSprite(500, windowHeight-400);
+  krtek = createSprite(100, 100);
   krtek.addAnimation('stretch','assets/1.png', 'assets/tile2.png');
-  krtek.addAnimation('normal','public/assets/3.png', 'public/assets/4.png');
+  krtek.addAnimation('normal','assets/3.png', 'public/assets/4.png');
   //krtek.scale = 0.6;
   krtek.setCollider('circle', 0, 0, 80);
   
@@ -62,8 +62,8 @@ function start(){
   fill(0)
   textSize(20);
   textFont('helvetica');
-  text('Press S to start', width/2, (height/2)-15);
-  text('and press mouse to jump', (width/2)-50, (height/2)+15);
+  text('Press S to start', width/2-30, (height/2)-15);
+  text('and press mouse to jump', (width/2)-60, (height/2)+15);
 }
 
 function draw() {  
@@ -138,8 +138,8 @@ function over(){
       fill(0);
       textSize(20);
       textFont('helvetica');
-      text('Game Over! Press R to restart', (width/2)-70, (height/2)-30);
-      text(`Your score: ${score}`, width/2, height/2);
+      text('Game Over! Press R to restart', (width/2)-100, (height/2)-30);
+      text(`Your score: ${score}`, width/2-50, height/2);
       
       if (stateChanged) {
     stateChanged = false;
