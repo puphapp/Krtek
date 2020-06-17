@@ -24,8 +24,8 @@ function setup() {
   createCanvas(windowWidth, windowHeight);
   
   krtek = createSprite(500, windowHeight-400);
-  krtek.addAnimation('stretch','public/assets/krtek/tile001.png', 'public/assets/krtek/tile0001.png');
-  krtek.addAnimation('normal','public/assets/krtek/tile001.png', 'public/assets/krtek/tile02.png');
+  krtek.addAnimation('stretch','assets/tile001.png', 'assets/tile0001.png');
+  krtek.addAnimation('normal','public/assets/tile001.png', 'public/assets/tile02.png');
   //krtek.scale = 0.6;
   krtek.setCollider('circle', 0, 0, 80);
   
@@ -57,7 +57,7 @@ function setup() {
 function start(){
   background(bgImg);
   
-  image(gImg, -scrollG, height, width, 100);
+  image(gImg, -scrollG, 500, width, 100);
     
   fill(0)
   textSize(20);
@@ -89,8 +89,8 @@ function draw() {
 
 function game(){
   
-  image(gImg, -scrollG, height, width, 100);
-  image(gImg, -scrollG + width, height, width, 100);
+  image(gImg, -scrollG, 500, width, 100);
+  image(gImg, -scrollG + width, 500, width, 100);
     
   if (scrollG > width) {
     scrollG = 0;
@@ -138,7 +138,7 @@ function over(){
       fill(0);
       textSize(20);
       textFont('helvetica');
-      text('Game Over! Press R to restart', (width/2)-100, (height/2)-30);
+      text('Game Over! Press R to restart', (width/2)-70, (height/2)-30);
       text(`Your score: ${score}`, width/2, height/2);
       
       if (stateChanged) {
