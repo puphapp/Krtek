@@ -66,8 +66,8 @@ function start(){
   fill(color('#A261A4'));
   textSize(60);
   textFont(oneFont);
-  textStroke(0);
-  textStrokeWeight(0.5);
+  stroke(0);
+  strokeWeight(0.5);
   text('Krtek game', (width/2)-150, (height/2)-70);
      
   fill(0);
