@@ -1,4 +1,4 @@
-const { text } = require("body-parser");
+//const { text } = require("body-parser");
 
 let krtek;
 let krtek2;
