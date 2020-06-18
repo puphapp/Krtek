@@ -144,7 +144,7 @@ function game(){
 function over(){
       fill(0);
       textSize(20);
-      textFont('helvetica');
+      textFont('Germania One');
       text('Game Over! Press R to restart', (width/2)-110, (height/2)-30);
       text(`Your score: ${score}`, width/2-60, height/2);
       
