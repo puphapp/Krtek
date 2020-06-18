@@ -18,6 +18,7 @@ function preload(){
  jump = loadSound('assets/jump.mp3'); 
  ost = loadSound('assets/polka.mp3');
  fail = loadSound('assets/fail.wav');
+ oneFont = loadFont('assets/GermaniaOne-Regular.ttf');
 }
 
 function setup() {
@@ -66,7 +67,7 @@ function start(){
      
   fill(0);
   textSize(20);
-  textFont('helvetica');
+  textFont(oneFont);
   text('Press S to start', (width/2)-50, (height/2)-15);
   text('and press mouse to jump', (width/2)-100, (height/2)+15);
 }
@@ -144,7 +145,7 @@ function game(){
 function over(){
       fill(0);
       textSize(20);
-      textFont('Germania One');
+      textFont(oneFont);
       text('Game Over! Press R to restart', (width/2)-110, (height/2)-30);
       text(`Your score: ${score}`, width/2-60, height/2);
       
