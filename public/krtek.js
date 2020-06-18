@@ -66,7 +66,7 @@ function start(){
   textFont('Germania One');
   text('Krtek game', (width/2)-50, (height/2)-50);*/
     
-  fill(0)
+  fill(0);
   textSize(20);
   textFont('helvetica');
   text('Press S to start', (width/2)-50, (height/2)-15);
@@ -110,7 +110,7 @@ function game(){
     krtek.changeAnimation('normal');
   }
   
-      if(keyWentDown('x') || mouseWentDown(LEFT))
+  if(keyWentDown('x') || mouseWentDown(LEFT))
   {
     krtek.changeAnimation('stretch');
     krtek.animation.rewind();
@@ -149,7 +149,7 @@ function over(){
       text('Game Over! Press R to restart', (width/2)-110, (height/2)-30);
       text(`Your score: ${score}`, width/2-60, height/2);
       
-      if (stateChanged) {
+    if (stateChanged) {
     stateChanged = false;
      let body = document.querySelector('body');
     
