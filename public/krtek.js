@@ -67,14 +67,14 @@ function start(){
   textSize(60);
   textFont(oneFont);
   stroke(0);
-  strokeWeight(0.5);
+  strokeWeight(1);
   text('Krtek game', (width/2)-140, (height/2)-60);
      
   fill(0);
   textSize(30);
   textFont(oneFont);
   text('Press S to start', (width/2)-100, (height/2)-15);
-  text('and press mouse/W to jump', (width/2)-180, (height/2)+15);
+  text('and press mouse/W to jump', (width/2)-170, (height/2)+15);
 }
 
 function draw() {  
@@ -156,7 +156,7 @@ function over(){
       text(`Your score: ${score}`, width/2-90, height/2);
       
     if (stateChanged) {
-    stateChanged = false;
+    stateChanged = true;
      let body = document.querySelector('body');
     
     let topBlock = document.createElement('div');
