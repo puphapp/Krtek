@@ -66,6 +66,8 @@ function start(){
   background(bgImg);
   
   image(gImg, -scrollG, 600, width, 100);
+
+  textStart();
      
   fill(0);
   textSize(20);
