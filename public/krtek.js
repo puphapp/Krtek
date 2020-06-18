@@ -74,7 +74,7 @@ function start(){
   textSize(30);
   textFont(oneFont);
   text('Press S to start', (width/2)-100, (height/2)-15);
-  text('and press mouse to jump', (width/2)-150, (height/2)+15);
+  text('and press mouse/W to jump', (width/2)-150, (height/2)+15);
 }
 
 function draw() {  
@@ -115,7 +115,7 @@ function game(){
     krtek.changeAnimation('normal');
   }
   
-  if(keyWentDown('x') || mouseWentDown(LEFT))
+  if(keyWentDown('w') || mouseWentDown(LEFT))
   {
     krtek.changeAnimation('stretch');
     krtek.animation.rewind();
@@ -123,9 +123,9 @@ function game(){
     jump.play();
   }
   
-  if(krtek2.position.x < 0){
+  /*if(krtek2.position.x < 0){
     krtek2.position.x = width;
-  }
+  }*/
 
   fill(0)
   textSize(40);
