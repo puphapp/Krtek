@@ -156,7 +156,7 @@ function over(){
       text(`Your score: ${score}`, width/2-90, height/2);
       
     if (stateChanged) {
-    stateChanged = false;
+    stateChanged = true;
      let body = document.querySelector('body');
     
     let topBlock = document.createElement('div');
