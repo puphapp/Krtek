@@ -126,9 +126,9 @@ function game(){
   }
 
   fill(0)
-  textSize(20);
-  textFont('helvetica');
-  text(`Score: ${score}`, 10, 30);
+  textSize(40);
+  textFont(oneFont);
+  text(`Score: ${score}`, 10, 50);
   
   if (frameCount % 25 == 0) {
     score++;
