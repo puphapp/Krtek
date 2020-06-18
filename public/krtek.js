@@ -26,7 +26,7 @@ function setup() {
   createCanvas(windowWidth, windowHeight);
   
   krtek = createSprite(100, 100, 'assets/1.png', 'assets/4.png');
-  krtek.addAnimation('stretch','assets/1.png', 'assets/tile2.png');
+  krtek.addAnimation('stretch','assets/1.png', 'assets/2.png');
   krtek.addAnimation('normal','assets/3.png', 'assets/4.png');
   //krtek.scale = 0.6;
   krtek.setCollider('circle', 0, 0, 80);
@@ -41,9 +41,9 @@ function setup() {
   
   bgImg = loadImage('assets/back.png');
   
-  krtek2 = createSprite(random(100, width), windowHeight-100);
+  krtek2 = createSprite(random(100, width), windowHeight-150);
   krtek2.addAnimation('normal','assets/tile1.png', 'assets/tile4.png');
- // krtek2.scale = 0.5;
+  krtek2.scale = 0.9;
   krtek2.setCollider('circle', 0, 0, 80);
   krtek2.depth = 1;
   krtek2.velocity.x = -3;
@@ -98,6 +98,7 @@ function game(){
   
   image(gImg, -scrollG, 600, width, 100);
   image(gImg, -scrollG + width, 600, width, 100);
+  image.depth=3;
     
   if (scrollG > width) {
     scrollG = 0;
