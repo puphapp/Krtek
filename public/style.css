@@ -22,3 +22,24 @@ canvas {
   top: 35%; 
   left: 5%;
 }
+
+.textStart {
+position: absolute;
+width: 281px;
+height: 30px;
+
+font-family: Germania One;
+font-style: normal;
+font-weight: normal;
+font-size: 64px;
+line-height: 30px;
+/* identical to box height, or 47% */
+
+text-align: center;
+letter-spacing: -0.015em;
+
+color: #A261A4;
+
+mix-blend-mode: darken;
+border: 0.5px solid #000000;
+}
