@@ -54,14 +54,14 @@ function setup() {
   loop();
 }
 
-function textStart(){
-text('Krtek game', (width/2)-50, (height/2)-50);
+let textStart = {
+text:'Krtek game'
 }
 
 function start(){
   background(bgImg);
   
-  image(gImg, -scrollG, 600, width, 100);
+  image(gImg);
 
   textStart();
      
