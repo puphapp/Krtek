@@ -140,6 +140,7 @@ function game(){
     state = 'over';  
     stateChanged = true;
     ost.stop();
+    ost.noLoop();
     fail.play();
     } 
   drawSprites();
@@ -151,8 +152,8 @@ function over(){
       fill(0);
       textSize(30);
       textFont(oneFont);
-      text('Game Over! Press R to restart', (width/2)-150, (height/2)-30);
-      text(`Your score: ${score}`, width/2-80, height/2);
+      text('Game Over! Press R to restart', (width/2)-170, (height/2)-30);
+      text(`Your score: ${score}`, width/2-90, height/2);
       
     if (stateChanged) {
     stateChanged = false;
