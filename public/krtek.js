@@ -1,4 +1,4 @@
-//const { text } = require("body-parser");
+const { text } = require("body-parser");
 
 let krtek;
 let krtek2;
@@ -25,7 +25,7 @@ function preload(){
 function setup() {
   createCanvas(windowWidth, windowHeight);
   
-  krtek = createSprite(100, 100);
+  krtek = createSprite(100, 100, 'assets/krtek/1.png', 'assets/krtek/4.png');
   krtek.addAnimation('stretch','assets/1.png', 'assets/tile2.png');
   krtek.addAnimation('normal','assets/3.png', 'public/assets/4.png');
   //krtek.scale = 0.6;
