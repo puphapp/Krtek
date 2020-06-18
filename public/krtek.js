@@ -63,7 +63,7 @@ function start(){
   
   image(gImg);
 
-  textStart();
+  textStart;
      
   fill(0);
   textSize(20);
