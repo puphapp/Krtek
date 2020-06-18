@@ -22,7 +22,7 @@ app.get('/info', (req, res) => {
 });
 
 app.get('/top/:n', (req, res) => {
-    db.find({}).sort({score: 1}).limit(req.params.n).exec((err, docs) => {
+    db.find({}).sort({score: -1}).limit(req.params.n).exec((err, docs) => {
         res.send({"top": JSON.stringify(docs)});
     });
 });
