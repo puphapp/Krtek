@@ -63,7 +63,7 @@ function start(){
   
   image(gImg);
 
-  fill(color('#A261A4');
+  fill(color('#A261A4'));
   textSize(64);
   textFont(oneFont);
   text('Press S to start', (width/2)-50, (height/2)-50);
