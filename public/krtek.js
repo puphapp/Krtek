@@ -138,7 +138,7 @@ function game(){
   
   if(krtek.collide(krtek2)) {
     state = 'over';  
-    stateChanged = false;
+    stateChanged = true;
     ost.stop();
     ost.noLoop();
     fail.play();
@@ -156,7 +156,7 @@ function over(){
       text(`Your score: ${score}`, width/2-90, height/2);
       
     if (stateChanged) {
-    stateChanged = true;
+    stateChanged = false;
      let body = document.querySelector('body');
     
     let topBlock = document.createElement('div');
