@@ -65,6 +65,7 @@ function start(){
   textSize(64);
   textFont('Germania One');
   text('Krtek game', (width/2)-50, (height/2)-50);
+  mixBlendMod('darken');
     
   fill(0)
   textSize(20);
