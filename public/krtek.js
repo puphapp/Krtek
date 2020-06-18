@@ -102,13 +102,13 @@ function game(){
   
   image(gImg, -scrollG, 600, width, 100);
   image(gImg, -scrollG + width, 600, width, 100);
-  image.depth=3;
     
   if (scrollG > width) {
     scrollG = 0;
   }
   
   krtek.velocity.y += GRAVITY;
+  krtek.velocity.x = (mouseX-krtek.position.x)/5;
     
   if(krtek.collide(ground)) {
     krtek.velocity.y = 0;
@@ -152,7 +152,7 @@ function over(){
       fill(0);
       textSize(30);
       textFont(oneFont);
-      text('Game Over! Press R to restart', (width/2)-170, (height/2)-30);
+      text('Game Over! Press R to restart', (width/2)-190, (height/2)-30);
       text(`Your score: ${score}`, width/2-90, height/2);
       
     if (stateChanged) {
