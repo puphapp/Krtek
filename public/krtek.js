@@ -1,3 +1,5 @@
+const { text } = require("body-parser");
+
 let krtek;
 let krtek2;
 let ground;
@@ -39,9 +41,9 @@ function setup() {
   
   bgImg = loadImage('assets/back.png');
   
-  krtek2 = createSprite(random(100, width), windowHeight-200);
+  krtek2 = createSprite(random(100, width), windowHeight-100);
   krtek2.addAnimation('normal','assets/tile1.png', 'assets/tile4.png');
-  krtek2.scale = 0.5;
+ // krtek2.scale = 0.5;
   krtek2.setCollider('circle', 0, 0, 80);
   krtek2.depth = 1;
   krtek2.velocity.x = -3;
@@ -58,11 +60,16 @@ function start(){
   background(bgImg);
   
   image(gImg, -scrollG, 600, width, 100);
+
+  fill(162, 97, 164, 1);
+  textSize(64);
+  textFont('Germania One');
+  text('Krtek game', (width/2)-50, (height/2)-50);
     
   fill(0)
   textSize(20);
   textFont('helvetica');
-  text('Press S to start', width/2-50, (height/2)-15);
+  text('Press S to start', (width/2)-50, (height/2)-15);
   text('and press mouse to jump', (width/2)-100, (height/2)+15);
 }
 
@@ -114,7 +121,7 @@ function game(){
   if(krtek2.position.x < 0){
     krtek2.position.x = width;
   }
-  
+
   fill(0)
   textSize(20);
   textFont('helvetica');
@@ -139,8 +146,8 @@ function over(){
       fill(0);
       textSize(20);
       textFont('helvetica');
-      text('Game Over! Press R to restart', (width/2)-150, (height/2)-30);
-      text(`Your score: ${score}`, width/2-100, height/2);
+      text('Game Over! Press R to restart', (width/2)-110, (height/2)-30);
+      text(`Your score: ${score}`, width/2-60, height/2);
       
       if (stateChanged) {
     stateChanged = false;
