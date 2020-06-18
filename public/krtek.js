@@ -138,7 +138,7 @@ function game(){
   
   if(krtek.collide(krtek2)) {
     state = 'over';  
-    stateChanged = true;
+    stateChanged = false;
     ost.stop();
     ost.noLoop();
     fail.play();
