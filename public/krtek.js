@@ -66,12 +66,12 @@ function start(){
   fill(color('#A261A4'));
   textSize(64);
   textFont(oneFont);
-  text('Press S to start', (width/2)-50, (height/2)-50);
+  text('Krtek game', (width/2)-150, (height/2)-50);
   strokeWeight(1);
   
      
   fill(0);
-  textSize(20);
+  textSize(30);
   textFont(oneFont);
   text('Press S to start', (width/2)-50, (height/2)-15);
   text('and press mouse to jump', (width/2)-100, (height/2)+15);
@@ -149,7 +149,7 @@ function game(){
 
 function over(){
       fill(0);
-      textSize(20);
+      textSize(30);
       textFont(oneFont);
       text('Game Over! Press R to restart', (width/2)-110, (height/2)-30);
       text(`Your score: ${score}`, width/2-60, height/2);
