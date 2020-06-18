@@ -66,16 +66,15 @@ function start(){
   fill(color('#A261A4'));
   textSize(60);
   textFont(oneFont);
-  text('Krtek game', (width/2)-100, (height/2)-50);
-  stroke(0);
-  strokeWeight(1);
-  
+  textStroke(0);
+  textStrokeWeight(0.5);
+  text('Krtek game', (width/2)-150, (height/2)-70);
      
   fill(0);
   textSize(30);
   textFont(oneFont);
-  text('Press S to start', (width/2)-50, (height/2)-15);
-  text('and press mouse to jump', (width/2)-100, (height/2)+15);
+  text('Press S to start', (width/2)-100, (height/2)-15);
+  text('and press mouse to jump', (width/2)-150, (height/2)+15);
 }
 
 function draw() {  
