@@ -1,5 +1,7 @@
 //const { text } = require("body-parser");
 
+const { text } = require("body-parser");
+
 let krtek;
 let krtek2;
 let ground;
@@ -56,16 +58,15 @@ function setup() {
   loop();
 }
 
+function textStart(){
+text('Krtek game', (width/2)-50, (height/2)-50);
+}
+
 function start(){
   background(bgImg);
   
   image(gImg, -scrollG, 600, width, 100);
-
-  fill(162, 97, 164, 1);
-  textSize(64);
-  textFont('Germania One');
-  text('Krtek game', (width/2)-50, (height/2)-50);
-    
+     
   fill(0);
   textSize(20);
   textFont('helvetica');
