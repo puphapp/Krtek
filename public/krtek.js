@@ -108,7 +108,7 @@ function game(){
   }
   
   krtek.velocity.y += GRAVITY;
-  krtek.velocity.x = (mouseX-krtek.position.x)/5;
+  krtek.velocity.x = (mouseX-krtek.position.x)/10;
     
   if(krtek.collide(ground)) {
     krtek.velocity.y = 0;
