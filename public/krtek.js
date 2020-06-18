@@ -74,7 +74,7 @@ function start(){
   textSize(30);
   textFont(oneFont);
   text('Press S to start', (width/2)-100, (height/2)-15);
-  text('and press mouse/W to jump', (width/2)-170, (height/2)+15);
+  text('and press mouse/W to jump', (width/2)-180, (height/2)+15);
 }
 
 function draw() {  
