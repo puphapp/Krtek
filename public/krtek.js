@@ -64,9 +64,10 @@ function start(){
   image(gImg);
 
   fill(color('#A261A4'));
-  textSize(64);
+  textSize(60);
   textFont(oneFont);
-  text('Krtek game', (width/2)-150, (height/2)-50);
+  text('Krtek game', (width/2)-100, (height/2)-50);
+  stroke(0);
   strokeWeight(1);
   
      
