@@ -108,7 +108,7 @@ function game(){
   }
   
   krtek.velocity.y += GRAVITY;
-  krtek.velocity.x = (mouseX-krtek.position.x)/10;
+  //krtek.velocity.x = (mouseX-krtek.position.x)/10;
     
   if(krtek.collide(ground)) {
     krtek.velocity.y = 0;
@@ -156,7 +156,7 @@ function over(){
       text(`Your score: ${score}`, width/2-90, height/2);
       
     if (stateChanged) {
-    stateChanged = true;
+    stateChanged = false;
      let body = document.querySelector('body');
     
     let topBlock = document.createElement('div');
