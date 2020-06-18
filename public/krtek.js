@@ -54,16 +54,15 @@ function setup() {
   loop();
 }
 
-let textStart = {
-text:'Krtek game'
-}
 
 function start(){
   background(bgImg);
   
   image(gImg);
 
-  textStart;
+  let textStart = {
+    text:'Krtek game'
+    }
      
   fill(0);
   textSize(20);
