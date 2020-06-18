@@ -68,7 +68,7 @@ function start(){
   textFont(oneFont);
   stroke(0);
   strokeWeight(0.5);
-  text('Krtek game', (width/2)-150, (height/2)-70);
+  text('Krtek game', (width/2)-140, (height/2)-60);
      
   fill(0);
   textSize(30);
@@ -151,8 +151,8 @@ function over(){
       fill(0);
       textSize(30);
       textFont(oneFont);
-      text('Game Over! Press R to restart', (width/2)-110, (height/2)-30);
-      text(`Your score: ${score}`, width/2-60, height/2);
+      text('Game Over! Press R to restart', (width/2)-150, (height/2)-30);
+      text(`Your score: ${score}`, width/2-80, height/2);
       
     if (stateChanged) {
     stateChanged = false;
