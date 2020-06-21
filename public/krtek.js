@@ -61,7 +61,7 @@ function setup() {
 function start(){
   background(bgImg);
   
-  image(gImg);
+  //image(gImg);
 
   fill(color('#A261A4'));
   textSize(60);
@@ -84,9 +84,11 @@ function draw() {
     start();
   }
   else if(state === 'game') {
+    console.log("game")
     game();
   }
   else if(state === 'over') {
+    console.log("over")
     over();
   }
   
@@ -140,7 +142,7 @@ function game(){
     state = 'over';  
     stateChanged = true;
     ost.stop();
-    noLoop();
+    //noLoop();
     fail.play();
     } 
   drawSprites();
@@ -149,6 +151,7 @@ function game(){
 }
 
 function over(){
+      console.log("yo");
       fill(0);
       textSize(30);
       textFont(oneFont);
@@ -156,7 +159,7 @@ function over(){
       text(`Your score: ${score}`, width/2-90, height/2);
       
     if (stateChanged) {
-    stateChanged = false;
+     stateChanged = false;
      let body = document.querySelector('body');
     
     let topBlock = document.createElement('div');
